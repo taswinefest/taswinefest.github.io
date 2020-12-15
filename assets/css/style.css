@@ -621,7 +621,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .hero-text-mobile h1 {
 
   margin: 0;
-  font-size: 80px;
+  font-size: 75px;
   text-align: center;
   color: #ffcc33;
   font-family: 'Oswald', sans-serif;
@@ -1326,6 +1326,11 @@ color: #ffffff;
   padding: 60px 0;
 }
 
+.sponsorslogo {
+    width: 90%;
+    height: auto;
+}
+
 #supporters .supporters-wrap {
   border-top: 1px solid #e0e5fa;
   border-left: 1px solid #e0e5fa;
@@ -1822,8 +1827,8 @@ color: #ffffff;
 }
 
 .footer-logos-row-nomargin {
-    margin-right: -40px;
-    margin-left: -40px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 #footer .footer-top .footer-contact {
