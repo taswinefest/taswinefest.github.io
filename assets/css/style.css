@@ -169,6 +169,60 @@ padding-bottom: 0px;
   background-color: #f6f7fd;
 }
 
+/*--- 
+FOOD
+---*/
+
+.foodlogo {
+    padding-bottom: 30px;
+}
+
+.fdcontainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.fdcentered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+color: #fff;
+    font-family: "Raleway", sans-serif;
+  font-weight: 700;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+    
+}
+
+ .fdcentered h2 {
+    color: #fff;
+}
+
+@media (max-width: 1000px) {
+
+  .fdcentered h2 {
+    font-size: 20px;
+
+  }
+     }
+
+@media (max-width: 576px) {
+
+  .fdcentered h2 {
+    font-size: 20px;
+
+  }
+     }
+
+@media (max-width: 400px) {
+
+  .fdcentered h2 {
+    font-size: 10px;
+
+  }
+     }
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -230,6 +284,16 @@ padding-bottom: 0px;
   max-height: 40px;
 }
 
+
+.musictitle {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+  font-weight: 700;
+    padding-top: 10px;
+    font-size: 30px;
+    padding-bottom: 30px;
+    
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
