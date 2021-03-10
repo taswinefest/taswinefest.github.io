@@ -7,6 +7,20 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.tastingbkg {
+    background: rgb(255,255,255);
+background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(186,224,255,1) 100%);
+}
+
+.abouttext {
+    color: #000000!important;
+}
+
+.faqlink {
+    display: contents!important;
+}
+
+
 a {
   color: #ffcc33;
   transition: 0.5s;
