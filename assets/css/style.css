@@ -12,8 +12,62 @@ body {
 background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(186,224,255,1) 100%);
 }
 
+.buttonnobutton {
+        appearance: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: #fff;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 0em;
+    font: inherit;
+    padding: 0px;
+    border-width: 0px;
+    border-style: none;
+    border-color: #fff;
+    border-image: none;
+}
+
 .abouttext {
     color: #000000!important;
+}
+
+/* Tooltip container */
+.tooltipa {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltipa .tooltiptexta {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltipa:hover .tooltiptexta {
+  visibility: visible;
+ transform: scale(1.1)
 }
 
 .faqlink {
@@ -423,7 +477,7 @@ color: #fff;
 }
 
 .nav-menu li.buy-tickets a {
-  color: #fff;
+  color: #000;
   background: #ffcc33;
   padding: 7px 22px;
   border-radius: 50px;
@@ -438,6 +492,7 @@ color: #fff;
 
 .nav-menu li.buy-tickets a:hover {
   background: none;
+    color: #fff
 }
 
 .nav-menu li.buy-tickets:hover a:before, .nav-menu li.buy-tickets.menu-active a:before {
@@ -1617,7 +1672,7 @@ color: #ffffff;
 }
 
 #buy-tickets .card .btn:hover {
-  background-color: #e0072f;
+  background-color: #ffa200;
 }
 
 #buy-tickets #buy-ticket-modal input, #buy-tickets #buy-ticket-modal select {
