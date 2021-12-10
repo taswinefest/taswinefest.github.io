@@ -1355,7 +1355,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 768px) {
   #hero {
-    height: 60vh;
+    height: 80vh;
   }
   #hero h1 {
     font-size: 60px;
