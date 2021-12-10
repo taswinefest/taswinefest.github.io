@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow: 
 
-Sitemap: https://vandemoniantouring.com.au/sitemap.xml
+Sitemap: https://taswinefest.com.au/sitemap.xml
