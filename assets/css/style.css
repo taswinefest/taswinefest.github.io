@@ -148,6 +148,11 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(186,224,255,1) 
 }
 
 
+.mcbkg {
+    background: rgb(255,255,255);
+background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1) 100%);
+}
+
 .card-body1 {
     height: 340px
 }
@@ -377,6 +382,29 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(186,224,255,1) 
       border-radius: 50px;
     transform: scale(1.05);
         color: #fecc33;
+}
+
+.card-btn2dis {
+  font-family: "Poppins", sans-serif;
+  font-weight: 750;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 0px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 0px 0 0 0;
+  color: #fff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  border: 2px solid #ffe28a;
+    background: #ffe28a;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.card-btn2dis:hover {
+
 }
 
 .buttonnobutton {
