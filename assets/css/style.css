@@ -24,12 +24,12 @@
     height: 36px;
     transition: 0.3s;
     font-family: 'Poppins', sans-serif;
-    color: #f9931c !important;
+    color: #333333 !important;
 }
 
 .social-links1 a:hover {
 
-    color: #ee189d !important;
+    color: #fff !important;
 }
 
 .sponsor2:hover {
@@ -141,9 +141,14 @@
 
 
 body {
-  background: #f9931c;
-  color: #f9931c;
+  background: #fff;
+  color: #333333;
   font-family: "Open Sans", sans-serif;
+    padding-top: 70px;
+}
+
+.bodyhome {
+   padding-top: 0!important; 
 }
 
 .card-text1 {
@@ -237,8 +242,8 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   padding: 12px 32px;
   border-radius: 0px;
   transition: 0.5s;
-    color: #f9931c;
-    background: #fff;
+    color: #fff;
+    background: #ffbf3f;
   line-height: 1;
   margin: 30px 0 0 0;
   -webkit-animation-delay: 0.8s;
@@ -419,11 +424,11 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
 
 .card-btn3:hover {
   transition: 0.5s;
-  border: 2px solid #fff;
-    background: #f9931c;
+  border: 2px solid #ffbf3f;
+    background: #fff;
       border-radius: 50px;
-    transform: scale(1.05);
-        color: #fff;
+
+        color: #333333;
 }
 
 .card-btn-tix:hover {
@@ -549,12 +554,12 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
 
 
 a {
-  color: #ffd19b;
+  color: #000;
   transition: 0.5s;
 }
 
 a:hover, a:active, a:focus {
-  color: #fff;
+  color: #000;
   outline: none;
   text-decoration: none;
 }
@@ -562,15 +567,15 @@ a:hover, a:active, a:focus {
 p {
   padding: 0;
   margin: 0 0 30px 0;
-    color: #fff;
+    color: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "winterfont", sans-serif;
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
   margin: 0 0 20px 0;
   padding: 0;
-  color: #fff;
+  color: #333333;
 }
 }
 
@@ -633,7 +638,7 @@ h1, h2, h3, h4, h5, h6 {
     background-size: contain;
     width: 100%;
     padding-top: 0px;
-    height: 35vh;
+    height: 30vh;
     z-index: 21;
     position: relative;
     object-fit: cover;
@@ -902,7 +907,7 @@ color: #fff;
 }
 
 #header.header-scrolled, #header.header-fixed {
-  background: #ffd19b;
+  background: #ffbf3f;
   height: 70px;
   padding: 15px 0;
   transition: all 0.5s;
@@ -952,6 +957,7 @@ color: #fff;
   margin: 0;
   padding: 0;
   list-style: none;
+    
 }
 
 .nav-menu ul {
@@ -1025,6 +1031,7 @@ color: #fff;
   font-weight: 600;
   font-size: 14px;
   outline: none;
+    text-transform: capitalize;
 }
 
 @media (max-width: 1199px) {
@@ -1034,7 +1041,7 @@ color: #fff;
 }
 
 .nav-menu .menu-active a, .nav-menu a:hover {
-  color: #ee189d;
+  color: #fff;
 }
 
 .nav-menu > li {
@@ -1245,6 +1252,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+.herovideo_text {
+    color: #fff;
+}
+
 .heroimg2 {
     background-image: url("../../assets/img/twf_bkg.png");
     height: 100vh;
@@ -1329,7 +1340,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: rgba(255, 255, 255, 0.9);
   margin: 10px 0 0 0;
   font-size: 40px;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Poppins', sans-serif;
         text-shadow: 1px 1px 1px rgba(0,0,0,0.20);
     padding-bottom: 40px;
 }
@@ -1849,7 +1860,8 @@ color: #ffffff;
   font-size: 18px;
   display: inline-block;
   background: #222636;
-  color: #eee;
+  color: #;
+    background: #333333;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -2458,14 +2470,14 @@ color: #ffffff;
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #ffd19b !important;
+  background: #ff0 !important;
   padding: 0 0 0px 0;
-  color: #eee;
+  color: #ff0;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #ffd19b;
+  background: #ffbf3f;
   padding: 10px 0 00px 0;
 }
 
@@ -2480,7 +2492,7 @@ color: #ffffff;
   line-height: 1;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  color: #fff;
+  color: #333333;
 }
 
     /* font-size: 18px; */
@@ -2508,8 +2520,8 @@ color: #ffffff;
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #f9931c;
-  color: #eee;
+  color: #ffbf3f;
+    background: #333333;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -2528,7 +2540,7 @@ color: #ffffff;
 #footer .footer-top h4 {
   font-size: 14px;
   font-weight: bold;
-  color: #f9931c;
+  color: #333333;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0px;
@@ -2541,7 +2553,7 @@ color: #ffffff;
     padding-top: 15px;
     padding-left: 25px;
   font-weight: 500;
-  color: #f9931c;
+  color: #333333;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0px;
@@ -2598,6 +2610,7 @@ color: #ffffff;
 
 #footer .footer-top .footer-contact p {
   line-height: 26px;
+    color: #333333!important;
 }
 
 #footer .footer-top .footer-newsletter {
