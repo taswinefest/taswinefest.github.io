@@ -28,7 +28,9 @@
 }
 
 .musicimgborder {
-    border: 3px solid #ffbf3f !important;
+    border: 7px solid #ffbf3f !important;
+    border-radius: 10px;
+    
 }
 
 .social-links1 a:hover {
@@ -188,7 +190,7 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
 }
 
 .card-body1 {
-    height: 340px
+    height: 250px
 }
 
 .card-body span {
@@ -891,6 +893,14 @@ padding-bottom: 0px;
   }
 
     }
+
+@media (max-width: 400px) {
+  .titletext1 {
+   font-size:37px;
+  }
+    
+
+}
 
 
 /* Sections Header
@@ -2390,7 +2400,7 @@ color: #ffffff;
 
 .foodimg{
     width: 100%;
-    border: 3px solid #212322;
+    border: 4px solid #ffcc33;
     border-radius: 4px;
     
     
@@ -2579,6 +2589,8 @@ color: #ffffff;
   border-radius: 5px;
   transition: all  0.3s ease-in-out;
   box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #buy-tickets .card:hover {
