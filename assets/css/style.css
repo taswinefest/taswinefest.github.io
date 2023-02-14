@@ -351,7 +351,6 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   border: 2px solid #FECC33;
     background: ;
     transition: 0.5s;
-    text-shadow: 3px 3px 3px rgba(0,0,0,0);
 }
 
 .tickets-btn:hover {
@@ -381,7 +380,6 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   border: 2px solid #212322;
     background: ;
     transition: 0.5s;
-    text-shadow: 3px 3px 3px rgba(0,0,0,0);
 }
 
 .tickets-btn2:hover {
@@ -437,7 +435,6 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   line-height: 1;
   margin: 15px 0 0 0;
   border: 2px solid #Fff;
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.37);
   }
     
         .tickets-btn {
@@ -450,7 +447,6 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   line-height: 1;
   margin: 15px 0 0 0;
 
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.37);
   }
     
     .button-linebreaker {
