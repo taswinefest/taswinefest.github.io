@@ -777,6 +777,25 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
+.titleimg2 {
+    background-position: top;
+    float: top;
+    background-size: contain;
+    width: 100%;
+    height: 25vh;
+    z-index: 21;
+    position: relative;
+    object-fit: cover;
+    object-position: top;
+    transition: 0.5s;
+    
+}
+
+.titleimg2:hover {
+    opacity: 30%;
+    transition: 0.5s;
+}
+
 .imgblur {
     filter: blur(px);
 }
@@ -3041,6 +3060,111 @@ color: #ffffff;
 #footer .copyright {
   text-align: center;
   padding-top: 15px;
+}
+
+
+
+
+.btn-group { 
+    margin-bottom: 25px;
+
+}
+.btn.checked { 
+     background: #333333;
+  color: #ffcc33;
+     border: 2px solid #333333;
+
+}
+
+/* Isotope Grid Styles */
+/* --------------------------------------- */
+.grid {
+  background: #fff;
+  max-width: 100%;
+}
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* Isotope Item Styles */
+/* --------------------------------------- */
+.item {
+  
+  float: left;
+  text-align: center;
+    padding-bottom: 20px;
+    
+}
+.item.round { border-radius: 75px; }
+
+.item.yellow {}
+.item.black {  }
+.item.red {}
+
+
+
+.item .content {
+  
+}
+
+.musicimage2 {
+    width: 100%;
+border: 4px solid #ffcc33;
+    border-radius: 4px;
+}
+
+.musicbtn {
+      color: #333333;
+  background: #ffcc33;
+  padding: 7px 22px;
+  border-radius: 50px;
+  border: 2px solid #ffcc33;
+  transition: all ease-in-out 0.3s;
+  font-weight: 700;
+    font-family: Poppins;
+  margin-left: 8px;
+  margin-top: 2px;
+  line-height: 1;
+  font-size: 1.25rem;
+
+}
+
+.musicbtn:hover {
+background: #333333;
+  color: #ffcc33;
+     border: 2px solid #333333;
+    
+}
+
+@media (max-width: 800px) {
+
+  .musicbtn {
+    font-size: 0.75rem;
+      
+
+  }
+}
+
+@media (max-width: 500px) {
+
+  .musicbtn {
+    font-size: 0.6rem;
+
+
+  }
+}
+
+@media (max-width: 400px) {
+
+  .musicbtn {
+    font-size: 0.5rem;
+      padding: 0;
+      
+
+  }
 }
 
 
