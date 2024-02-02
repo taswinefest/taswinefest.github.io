@@ -125,7 +125,14 @@
 .card1 {
     border: 3px solid #ffbf3f !important;
     border-radius: 0px;
-;
+
+}
+
+.card2 {
+    border: 3px solid #ffbf3f !important;
+    border-radius: 0px;
+    padding-top: 10px;
+
 }
 
 .sponsor3 {
