@@ -1,14 +1,238 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-.sponsor2 {
+.sponsor2original {
     width: 15%;
     margin-left: 20px;
     margin-right: 20px;
     opacity: 70%;
+    pointer-events: none;
 
     
 }
+
+.sponsor2 {
+    width: 10%;
+    margin-left: 0px;
+    margin-right: 0px;
+    opacity: 70%;
+    pointer-events: none;
+
+    
+}
+
+.fix-cardimg {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+.card-btn-date {
+  font-family: "Poppins", sans-serif;
+  font-weight: 750;
+  font-size: 30px;
+  letter-spacing: 1px;
+    line-height: 100%;
+  color: #ffffff;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+
+    
+}
+
+@media (max-width: 720px) {
+
+  .card-btn-date {
+   font-size: 20px;
+      
+
+  }
+/*--------------------------------------------------------------
+# Mini EDM Signup
+--------------------------------------------------------------*/
+
+
+
+
+.miniedm_container {
+  margin: 0 auto;
+    display: inline-block;
+}
+
+miniedm_h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+}
+
+.miniedm_form {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  border-radius: 0.5*$auto;
+  margin: 0 auto;
+  overflow: hidden;
+    padding: 0;
+}
+  .miniedm_input {
+    line-height: auto;
+
+      margin: 0;
+    border: none;
+      padding-left: 4px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 300;
+    background: #eee;
+    letter-spacing: 0.02em;
+      
+   
+    }
+
+.miniedm_btn {
+    line-height: auto;
+    padding-left: 4px;
+      margin: 0;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 300;
+    background: #eee;
+    letter-spacing: 0.02em;
+      
+      &:hover {
+        background: #000000;
+      }
+    }
+    
+   
+  }
+}
+
+/*--------------------------------------------------------------
+# END Mini EDM Signup
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Old content notice
+--------------------------------------------------------------*/
+
+
+ .ocn-modal-border {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 10px solid red; /* Change the color as needed */
+      pointer-events: none;
+      z-index: 1040; /* Ensure it's above the overlay */
+    }
+    .ocn-modal-backdrop {
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    }
+
+
+
+/*--------------------------------------------------------------
+# END content notice
+--------------------------------------------------------------*/
+
+
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #000 #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {to{transform: rotate(.5turn)}}
+
+.loaderouter {
+          position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#newsletter-form {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin-top: 20px;
+    clear: left;
+    font: 18px Poppins,sans-serif;
+    z-index: 5;
+}
+
+.vt-field {
+    color: #333333;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 7px 0px 8px 0px;
+    width: 270px;
+    white-space: nowrap;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid #333333;
+    margin-top: 8px;
+    padding-left: 10px;
+}
+
+.vt-field_short {
+    color: #333333;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 7px 0px 8px 0px;
+    width: 150px;
+    white-space: nowrap;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid #333333;
+    margin-top: 8px;
+    padding-left: 10px;
+}
+
+.vt-field-name {
+    color: #333333;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 7px 100px 8px 100px;
+    white-space: nowrap;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid #333333;
+}
+
+.signupbtn {
+  color: #000;
+  background: #ffbf3f;
+  padding: 15px 22px;
+  border-radius: 50px;
+  border: 2px solid #000;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-top: 22px;
+  line-height: 1;
+  font-size: 13px;
+}
+
+ .signupbtn:hover {
+  color: #000;
+  background: #e69138;
+  padding: 15px 22px;
+  border-radius: 50px;
+  border: 2px solid #000;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-top: 22px;
+  line-height: 1;
+  font-size: 13px;
+}
+
 
 @font-face {
     font-family: "winterfont";
@@ -22,6 +246,7 @@
     text-align: center;
     width: 36px;
     height: 36px;
+    font-weight: 400;
     transition: 0.3s;
     font-family: 'Poppins', sans-serif;
     color: #333333 !important;
@@ -42,6 +267,7 @@
     opacity: 50%;
     transform: scale(1.03);
     transition: 0.5s;
+    pointer-events: none;
 }
 
 
@@ -156,7 +382,7 @@
 body {
   background: #fff;
   color: #333333;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
     padding-top: 70px;
 }
 
@@ -232,7 +458,7 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   font-family: "Poppins", sans-serif;
   font-weight: 750;
   font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   display: inline-block;
   padding: 12px 32px;
   border-radius: 0px;
@@ -242,19 +468,21 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   color: #f9931c;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-    color: #fff;
+    color: #333333;
     background: #ffbf3f;
     position: absolute;
     bottom: 25px;
     ;
 }
 
+
+
 .card-btn1:hover {
   transition: 0.5s;
   border: 2px solid #f9931c;
-    background: #f9931c;
-      border-radius: 50px;
-        color: #fff;
+    background: #ffbf3f;
+        transform: scale(1.05);
+        color: #333333;
 }
 
 /* Video Page */
@@ -296,12 +524,12 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   font-family: "Poppins", sans-serif;
   font-weight: 750;
   font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   display: inline-block;
   padding: 12px 32px;
   border-radius: 0px;
   transition: 0.5s;
-    color: #fff;
+    color: #333333;
     background: #ffbf3f;
   line-height: 1;
   margin: 30px 0 0 0;
@@ -315,8 +543,8 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   transition: 0.5s;
   border: 2px solid #ffbf3f;
     background: #ffbf3f;
-      border-radius: 50px;
-        color: #fff;
+        transform: scale(1.05);
+        color: #333333;
 }
 
 
@@ -344,7 +572,7 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   font-family: "Poppins", sans-serif;
   font-weight: 750;
   font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   display: auto;
   padding: 12px 32px;
   border-radius: 50px;
@@ -352,7 +580,7 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   line-height: 1;
   margin: 30px 0 0 0;
   background: #FECC33;
-    color: #fff;
+    color: #333333;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   border: 2px solid #FECC33;
@@ -362,12 +590,43 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
 
 .tickets-btn:hover {
     background: #FECC33;
-    color: #000;
+    color: #333333;
     transition: 0.5s;
-    transform: scale(1.05);
+    transform: scale(1.15);
         text-shadow: none;
     
 }
+
+.tickets-btn-home {
+  font-family: "Poppins", sans-serif;
+  font-weight: 750;
+  font-size: 18px;
+    
+  letter-spacing: 1px;
+  display: auto;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 30px 0 0 0;
+  background: #FECC3300;
+    color: #ffffff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  border: 2px solid #ffffff;
+    background: ;
+    transition: 0.5s;
+}
+
+.tickets-btn-home:hover {
+    background: #ffffff;
+    color: #333333;
+    transition: 0.5s;
+    transform: scale(1);
+        text-shadow: none;
+    
+}
+
 
 .tickets-btn2 {
   font-family: "Poppins", sans-serif;
@@ -784,6 +1043,12 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
+.oleo-script-swash-caps-regular {
+  font-family: "Oleo Script Swash Caps", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .titleimg2 {
     background-position: top;
     float: top;
@@ -813,8 +1078,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .titleimg1:hover {
-    opacity: 30%;
-    transition: 0.5s;
+   
 }
 
 .subhead {
@@ -947,6 +1211,17 @@ padding-bottom: 0px;
   left: calc(50% - 25px);
 }
 
+.pbvt {
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    padding-top: 20px;
+    opacity: 70%;
+}
+
+.pbvt span {
+    font-family: Oleo Script Swash Caps;
+}
 .section-header1 {
   margin-bottom: 60px;
   position: relative;
@@ -959,6 +1234,23 @@ padding-bottom: 0px;
   width: 60px;
   height: 5px;
   background: #ffd19b;
+    opacity: %;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-header3 {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-header3::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+
     opacity: %;
   bottom: 0;
   left: calc(50% - 25px);
@@ -1157,7 +1449,7 @@ FOOD
   left: 50%;
   transform: translate(-50%, -50%);
 color: #fff;
-    font-family: "Raleway", sans-serif;
+    font-family: "Poppins", sans-serif;
   font-weight: 700;
     text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
     
@@ -1274,7 +1566,7 @@ color: #fff;
   margin: 0;
   padding: 6px 0;
   line-height: 1;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -1292,12 +1584,13 @@ color: #fff;
   padding: 0;
   margin: 0;
   max-height: 40px;
+    opacity: 70%;
 }
 
 
 .musictitle {
     text-align: center;
-    font-family: "Raleway", sans-serif;
+    font-family: "Poppins", sans-serif;
   font-weight: 700;
     padding-top: 10px;
     font-size: 30px;
@@ -1383,10 +1676,11 @@ color: #fff;
   text-decoration: none;
   display: inline-block;
   color: #000;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 14px;
   outline: none;
+    opacity: 70%;
     text-transform: capitalize;
 }
 
@@ -1398,6 +1692,7 @@ color: #fff;
 
 .nav-menu .menu-active a, .nav-menu a:hover {
   color: #fff;
+    opacity: 100%
 }
 
 .nav-menu > li {
@@ -1428,7 +1723,7 @@ color: #fff;
   border-radius: 50px;
   border: 2px solid #000;
   transition: all ease-in-out 0.3s;
-  font-weight: 500;
+  font-weight: 300;
   margin-left: 8px;
   margin-top: 2px;
   line-height: 1;
@@ -1660,6 +1955,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+.twf-footer-logo {
+    width: 10%;
+    
+    @media (max-width: 700px) {
+    width: 30%;
+  }
+}
+
 #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.6);
@@ -1761,7 +2064,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #hero .about-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 750;
   font-size: 14px;
   letter-spacing: 1px;
@@ -1779,7 +2082,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #hero .about-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 750;
   font-size: 14px;
   letter-spacing: 1px;
@@ -2225,7 +2528,7 @@ color: #ffffff;
   font-size: 18px;
   display: inline-block;
   background: #222636;
-  color: #;
+  color: #ffffff;
     background: #333333;
   line-height: 1;
   padding: 8px 0;
@@ -2494,7 +2797,7 @@ color: #ffffff;
   padding: 18px 0;
   display: block;
   position: relative;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -2880,7 +3183,7 @@ color: #ffffff;
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: #333333;
 }
@@ -2903,7 +3206,7 @@ color: #ffffff;
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
 }
 
@@ -2911,7 +3214,8 @@ color: #ffffff;
   font-size: 18px;
   display: inline-block;
   color: #ffbf3f;
-    background: #333333;
+    background: #000000;
+    opacity: 70%;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -2920,6 +3224,7 @@ color: #ffffff;
   width: 36px;
   height: 36px;
   transition: 0.3s;
+    text-align: center;
 }
 
 #footer .footer-top .social-links a:hover {
@@ -3199,4 +3504,82 @@ background: #333333;
     margin-bottom: 30px;
     border-top: 2px solid #919191;
 }
+
+/*--------------------------------------------------------------
+# Old content notice
+--------------------------------------------------------------*/
+
+
+    .ocn-modal-border {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1050; /* Ensure it's above the backdrop */
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+    .ocn-modal-border::before,
+    .ocn-modal-border::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 10px solid #ffbf3f; /* Change the color as needed */
+      box-sizing: border-box;
+    }
+    .ocn-modal-border::before {
+      border-radius: 30px; /* Adjust the radius as needed */
+    }
+    .ocn-modal-border.hidden {
+      opacity: 0;
+    }
+    .ocn-modal-backdrop {
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+      z-index: 1040; /* Ensure it's below the border */
+    }
+    .ocn-modal-dialog-centered {
+      display: flex;
+      align-items: center;
+      min-height: calc(100% - 3.5rem);
+    }
+
+.ocn-modal-image-wrapper {
+      position: relative;
+    }
+    .ocn-modal-image-wrapper img {
+      width: 100%;
+      height: auto;
+      border: none;
+    }
+
+    .ocn-centered-text {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .ocn-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      color: white;
+      background: black;
+      border-radius: 50%;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+/*--------------------------------------------------------------
+# END content notice
+--------------------------------------------------------------*/
+
 
