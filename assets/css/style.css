@@ -234,6 +234,8 @@ miniedm_h1 {
 }
 
 
+
+
 @font-face {
     font-family: "winterfont";
     src: url("../../assets/css/winterfont.woff") format('woff');
@@ -281,6 +283,11 @@ miniedm_h1 {
 
 }
 
+.lrpad {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 .sponsor1:hover {
     opacity: 60%;
     transition: 0.5s;
@@ -316,6 +323,9 @@ miniedm_h1 {
 
   }
 }
+
+
+
 
 .sponsor4 {
     width: 100%;
@@ -527,12 +537,13 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
   letter-spacing: 0px;
   display: inline-block;
   padding: 12px 32px;
-  border-radius: 0px;
+  border-radius: 3px;
+    border-color: #ffbf3f;
   transition: 0.5s;
     color: #333333;
     background: #ffbf3f;
   line-height: 1;
-  margin: 30px 0 0 0;
+  margin: 15px 0 0 0;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
     background: ;
@@ -545,6 +556,73 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
     background: #ffbf3f;
         transform: scale(1.05);
         color: #333333;
+}
+
+.card-btn3alt {
+  font-family: "Poppins", sans-serif;
+  font-weight: 750;
+  font-size: 14px;
+  letter-spacing: 0px;
+  display: inline-block;
+  padding: 12px 0px;
+    width: 160px;
+  border-radius: 3px;
+    border-color: #ffbf3f;
+  transition: 0.5s;
+    color: #333333;
+    background: #ffbf3f;
+  line-height: 1;
+  margin: 15px 0 0 0;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+    background: ;
+    ;
+}
+
+.card-btn3alt:hover {
+  transition: 0.5s;
+  border: 2px solid #ffbf3f;
+    background: #ffbf3f;
+        transform: scale(1.05);
+        color: #333333;
+}
+
+.card-btn4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 750;
+  font-size: 14px;
+  letter-spacing: 0px;
+  display: inline-block;
+  padding: 12px 0px;
+    width: 160px;
+  border-radius: 3px;
+   border: 2px solid #ffbf3f;
+  transition: 0.5s;
+    color: #333333;
+    background: #fff;
+  line-height: 1;
+  margin: 10px 0 0 0;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+    background: ;
+    ;
+}
+
+.card-btn4:hover {
+  transition: 0.5s;
+  border: 2px solid #ffbf3f;
+    background: #ffbf3f;
+        transform: scale(1.05);
+        color: #333333;
+}
+
+.ent-session {
+    font-weight: 300;
+}
+
+.entimg2025 {
+    width: 100%;
+    
 }
 
 
@@ -1303,6 +1381,8 @@ padding-bottom: 0px;
   text-align: center;
   font-weight: 700;
   margin-bottom: 10px;
+color: black;
+
 }
 
 .section-headerent h3 {
@@ -2729,11 +2809,50 @@ color: #ffffff;
 
 .foodimg{
     width: 100%;
-    border: 4px solid #ffcc33;
-    border-radius: 4px;
+
     
     
 }
+
+.foodtextheight {
+    height: 150px;
+}
+
+.foodtext h5 {
+    color: black;
+     text-transform: capitalize;
+    padding-top:5px;
+        line-height: 1;
+    margin: 0;
+        opacity: 70%;
+
+}
+
+.foodtext h6 {
+    color: black;
+    font-weight: 200;
+    padding-top:8px;
+    margin: 0;
+    margin-top: 0;
+    line-height: 0;
+    font-size: 0.9rem;
+        opacity: 70%;
+
+}
+
+.foodtext p {
+    color: black;
+    font-size: 1rem;
+    font-weight: 200;
+    padding-top:20px;
+    margin: 0;
+    line-height: 1.2;
+        opacity: 80%;
+
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Sponsors Section
@@ -3561,7 +3680,7 @@ background: #333333;
       background-color: white;
       padding: 20px;
       text-align: center;
-      font-size: 24px;
+      font-size: 18px;
     }
 
     .ocn-close {
