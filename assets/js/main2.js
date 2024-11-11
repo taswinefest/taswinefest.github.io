@@ -1,26 +1,9 @@
-/**
-* Template Name: TheEvent - v2.2.0
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
+
 !(function($) {
   "use strict";
 
-  // Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-  $('.back-to-top').click(function() {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 1500, 'easeInOutExpo');
-    return false;
-  });
+  
 
   // Header fixed on scroll
   $(window).scroll(function() {
@@ -33,16 +16,6 @@
     $('#header').addClass('header-scrolled');
   }
 
-  // Initialize Venobox
-  $(window).on('load', function() {
-    $('.venobox').venobox({
-      bgcolor: '',
-      overlayColor: 'rgba(6, 12, 34, 0.85)',
-      closeBackground: '',
-      closeColor: '#fff',
-      share: false
-    });
-  });
 
   // Initiate superfish on nav menu
   $('.nav-menu').superfish({
@@ -143,27 +116,7 @@
 
   
 
-  // Gallery carousel (uses the Owl Carousel library)
-  $(".gallery-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    center: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 3
-      },
-      992: {
-        items: 4
-      },
-      1200: {
-        items: 5
-      }
-    }
-  });
+
 
   // Buy tickets select the ticket type on click
   $('#buy-ticket-modal').on('show.bs.modal', function(event) {
