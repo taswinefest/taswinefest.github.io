@@ -72,6 +72,19 @@
 }
 </script>
     
+    <script>
+        (function () {
+            // Get the current URL's query parameters
+            const params = new URLSearchParams(window.location.search);
+
+            // Check if the 'utm_id' parameter exists and equals 'TWF_W22'
+            if (params.get('utm_id') === 'TWF_W22') {
+                // Redirect the user to the desired URL
+                window.location.href = "https://taswinefest.com.au/links"; // Replace with the desired URL
+            }
+        })();
+    </script>
+    
 
     
     <!-- UNIFORM START -->
@@ -307,13 +320,27 @@
               </div>
           <div class="row" style="padding-top: 70px;">
           
-          <!-- tickets box --><div class="col-12 col-lg-4" style="padding-top: 40px;">
+          <!-- res tables  box -- <div class="col-12 col-lg-4" style="padding-top: 40px;">
+             <a href="signup.html"> <div class="card1" style="width: 100%;">
+  <img class="fix-cardimg card-img-top" src="assets/img/tables.jpg" alt="Card image cap">
+  <div class="card-body card-body1">
+    <h5 class="card-title1 card-title">Reserved Tables</h5>
+    <p class="card-text1 card-text">Now available for your chosen session. Secure yours now.<br><br>&nbsp;</p>
+    <a class="card-btn1" href="tickets.html" style="">Buy Now</a>
+  </div>
+</div></a>
+              
+              </div>
+              
+              <!-- end res tables box -->
+              
+                        <!-- tix  box --> <div class="col-12 col-lg-4" style="padding-top: 40px;">
              <a href="signup.html"> <div class="card1" style="width: 100%;">
   <img class="fix-cardimg card-img-top" src="assets/img/twf24web_2.jpg" alt="Card image cap">
   <div class="card-body card-body1">
-    <h5 class="card-title1 card-title">Get Tickets</h5>
-    <p class="card-text1 card-text">Tickets to the 2025 Tasmanian Wine Festival are on sale now<br><br>&nbsp;</p>
-    <a class="card-btn1" href="tickets.html" style="">Buy Now</a>
+    <h5 class="card-title1 card-title">Buy Tickets</h5>
+    <p class="card-text1 card-text">Tickets for the 2025 Tasmanian Wine Festival are on sale now.<br><br>&nbsp;</p>
+    <a class="card-btn1" href="ticketsdirect.html" style="">Purchase</a>
   </div>
 </div></a>
               
