@@ -20,9 +20,38 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/favicon.png" rel="apple-touch-icon">
         <!-- UNIFORM START -->
+   <!-- UNIFORM START -->
     <!-- UNIFORM START -->
     <!-- UNIFORM START -->
     <!-- UNIFORM START -->
+    
+     <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1724940914332352');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1724940914332352&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LCHLQVGC8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7LCHLQVGC8');
+</script>
     
   <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,6 +93,8 @@
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- End Header -->
+    <!-- UNIFORM END -->
+    <!-- UNIFORM END -->
     <!-- UNIFORM END -->
     <!-- UNIFORM END -->
     <!-- UNIFORM END -->
@@ -118,14 +149,6 @@
       
     </main>  
 
-    <!-- Seeka Script -->
-    <script>
-"use strict";(()=>{var A=Object.defineProperty;var k=(i,e,t)=>e in i?A(i,e,{enumerable:!0,configurable:!0,writable:!0,value:t}):i[e]=t;var u=(i,e,t)=>k(i,typeof e!="symbol"?e+"":e,t);var l=(i,e,t)=>new Promise((n,s)=>{var a=o=>{try{r(t.next(o))}catch(c){s(c)}},d=o=>{try{r(t.throw(o))}catch(c){s(c)}},r=o=>o.done?n(o.value):Promise.resolve(o.value).then(a,d);r((t=t.apply(i,e)).next())});var g=class{constructor(e){u(this,"p");u(this,"personId");u(this,"device",{});this.p=e}getTrait(e){throw new Error("Unavailable.")}addTrait(e,t,n){return l(this,null,function*(){this.p("addTrait",[e,t,n])})}setTrait(e,t,n){return l(this,null,function*(){this.p("setTrait",[e,t,n])})}getProfile(){throw new Error("Unavailable.")}setProfile(e){return l(this,null,function*(){this.p("setProfile",[e])})}touchAndGetSessionId(){throw new Error("Unavailable.")}mergeProfile(e){return l(this,null,function*(){this.p("mergeProfile",[e])})}mergeTwoProfiles(e,t){throw new Error("Unavailable.")}reset(e){return l(this,null,function*(){this.p("reset",[e])})}syncIdentity(e){throw new Error("Unavailable.")}isAnonymous(e){throw new Error("Unavailable.")}flushIdentitySyncQueue(){return l(this,null,function*(){this.p("flushIdentitySyncQueue",[])})}sanitiseProfile(e){throw new Error("Unavailable.")}generateNewSessionId(e){throw new Error("Unavailable.")}};var f=class{constructor(e){u(this,"p");this.p=e}custom(e,t,n){this.p("custom",[e,t,n])}viewPage(e,t){this.p("viewPage",[e,t])}addPaymentMethod(e,t,n){this.p("addPaymentMethod",[e,t,n])}keywordSearch(e,t,n){this.p("keywordSearch",[e,t,n])}userLogin(e,t,n){this.p("userLogin",[e,t,n])}userLoginSignup(e,t,n){this.p("userLoginSignup",[e,t,n])}newsletterSignup(e,t,n){this.p("newsletterSignup",[e,t,n])}applyPromotionalCode(e,t,n){this.p("applyPromotionalCode",[e,t,n])}lead(e,t,n){this.p("lead",[e,t,n])}startTrial(e,t,n){this.p("startTrial",[e,t,n])}contactMessage(e,t,n){this.p("contactMessage",[e,t,n])}schedule(e,t,n){this.p("schedule",[e,t,n])}viewContentItem(e,t,n){this.p("viewContentItem",[e,t,n])}order(e,t,n){this.p("order",[e,t,n])}subscriptionItemPurchase(e,t,n){this.p("subscriptionItemPurchase",[e,t,n])}initiateCheckout(e,t,n){this.p("initiateCheckout",[e,t,n])}viewProduct(e,t,n){this.p("viewProduct",[e,t,n])}addToCart(e,t,n){this.p("addToCart",[e,t,n])}addToWishlist(e,t,n){this.p("addToWishlist",[e,t,n])}removeFromCart(e,t,n){this.p("removeFromCart",[e,t,n])}changeProductAttribute(e,t,n){this.p("changeProductAttribute",[e,t,n])}filterItemsByAttribute(e,t,n){this.p("filterItemsByAttribute",[e,t,n])}activity(e,t,n){this.p("activity",[e,t,n])}};var m=(i,e)=>{window.Converge||(window.Converge={}),window.ConvergeTrackingQueue||(window.ConvergeTrackingQueue=[]),window.Converge.track||(window.Converge.track=new f(i)),window.Converge.identity||(window.Converge.identity=new g(e)),window._skInitH||(window._skInitH=[])},v=()=>{window.addEventListener("message",i=>{let e=i.data;e.dest==="seeka"&&window.Converge[e.payload.api][e.payload.method](...e.payload.params)},!1)};var y=(i,e,t)=>{var s;if(!e||e.length===0)return t;let n=i.toLowerCase().replace("www.","").split(":")[0];for(let a=0;a<e.length;a++){let d=e[a],r=(s=d.hostname)==null?void 0:s.toLowerCase().replace("www.","").split(":")[0];if(n.endsWith(r)||r.endsWith(n))return d;let o=r.split(".").slice(1).join(".");if(n.endsWith(o)||o.endsWith(n))return d}return t};var p=(i,e,t)=>{var d,r,o;if(window._skInitH||(window._skInitH=[]),window._skInitH.indexOf(i)>-1)return;window._skInitH.push(i);let n=document.createElement("script");n.async=!0,e&&(n.onload=function(c){e(c)}),t&&(n.onerror=function(c){t(c)});let s=null;if(i.indexOf("cache=")>-1||((d=window.location.search)==null?void 0:d.indexOf("cache=0"))>-1||((r=window.location.search)==null?void 0:r.indexOf("_cache=0"))>-1||((o=window.location.search)==null?void 0:o.indexOf("_s_sidekick_mode"))>-1)s=new Date().getTime().toString();else try{s=sessionStorage.getItem("sk_config_cache")}catch(c){s=""}s&&(i=i+"&cache="+s),n.src=i,window.Seeka=window.Seeka||{},window.Seeka.client=window.Seeka.client||{};try{window.Seeka.client.origin={h:new URL(i).hostname}}catch(c){console.log(c)}let a=document.getElementsByTagName("script")[0];a&&a.parentNode?a.parentNode.insertBefore(n,a):document.head.appendChild(n)},h=i=>{if(!i||!i.instances||i.instances.length===0)return;let e={hostname:"sdk.seeka.services"};(!i.hosts||i.hosts.length===0)&&(i.hosts=[e]);let t=!1;try{t=!!sessionStorage.getItem("sk_ses_h_def")}catch(r){console.error(r)}let n=t?e:y(window.location.hostname,i.hosts,e),s=i.instances.map(r=>r.id).join("_"),a="";i.instances.forEach((r,o)=>{a+=(a?"&":"?")+`k[${o}]=${r.key}`});let d=r=>`${r.protocol||"https"}://${r.hostname}${r.path===void 0?"/static/c":r.path}/${s}${r.ext===void 0?".js":r.ext}${a}${i.extraParams?"&"+i.extraParams:""}`;p(d(n),i.onLoad,r=>{n.hostname!==e.hostname?window.location.hostname==="localhost"?console.error("Failed Seeka "+n.hostname):(console.warn("Failed Seeka "+n.hostname+". Using "+e.hostname),sessionStorage.setItem("sk_ses_h_def","1"),p(d(e),i.onLoad,()=>{console.error("Failed Seeka "+e.hostname),i.onError&&i.onError(r)})):i.onError&&i.onError(r)})};var I=()=>{m((i,e)=>{window.ConvergeTrackingQueue.push({t:"act",a:[i,...e]})},(i,e)=>{window.ConvergeTrackingQueue.push({t:"id",a:[i,...e]})})};I();window.SeekaInit=p;window.SeekaInstall=h;v();})();
-
-SeekaInstall({"extraParams":"&vo=latest","hosts":[],"instances":[{"org":"8262f619178281744fd03a0c4f5b9534","id":"2469ee00910940777c343a15f220fa7a","key":"sdkr_Q2ZESjhCbklCUkxha2dWQXJ3aGZVazF4dmg0d0dnUlctMUdQdVBfTUtrYk1ER05Kdm5WWnE4Mko2cWM4eWFyMHBxX2NiZTFFZnoybkt2UFpQbUFDbjNNYlBXcjV6ODlWdXNrUUNqNUNwQ0JMNk02OVFySnl2QnJxdGl0cE16cnp2M05QRjZNQ1NScFk1TDRXakh2TXZXSXUtLU03US1CWnFjUGcyQzQ4M2g2c1lYcXA"}]});
-</script>
-
-    <!-- END Seeka Script -->
     
         <!-- JavaScript footer inclusion -->
     <!-- This loads the footer from 'footer.html' to ensure consistency across the site -->
