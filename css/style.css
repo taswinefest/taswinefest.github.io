@@ -1659,6 +1659,10 @@ color: #fff;
 #header {
   height: 90px;
   padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   position: fixed;
   left: 0;
   top: 0;
@@ -1688,6 +1692,9 @@ color: #fff;
 #header.header-scrolled, #header.header-fixed {
   background: #ffbf3f;
   height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   padding: 15px 0;
   transition: all 0.5s;
 }
@@ -1736,6 +1743,7 @@ color: #fff;
 .nav-menu, .nav-menu * {
   margin: 0;
   padding: 0;
+    display: flex;
   list-style: none;
     
 }
@@ -1803,7 +1811,7 @@ color: #fff;
 
 /* Nav Meu Styling */
 .nav-menu a {
-  padding: 8px;
+  padding: 0 10px;
   text-decoration: none;
   display: inline-block;
   color: #000;

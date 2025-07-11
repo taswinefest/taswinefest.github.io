@@ -138,3 +138,44 @@
   });
 
 })(jQuery);
+
+  // Homepage heading text auto-resizer
+
+
+function fitTextTo90Percent(containerSelector, textSelector, maxRem = 2, minRem = 0.5, step = 0.05) {
+  const container = document.querySelector(containerSelector);
+  const text = document.querySelector(textSelector);
+
+  if (!container || !text) return;
+
+  // Reset font size
+  let currentSize = maxRem;
+  text.style.fontSize = currentSize + "rem";
+
+  // Measure target width
+  const maxAllowedWidth = container.clientWidth * 0.9;
+
+  // Shrink text until it fits 90% of container width or hits minRem
+  while (text.scrollWidth > maxAllowedWidth && currentSize > minRem) {
+    currentSize -= step;
+    text.style.fontSize = currentSize + "rem";
+  }
+}
+
+window.addEventListener("load", () => {
+  fitTextTo90Percent(".text-container", ".fit-text");
+});
+
+window.addEventListener("resize", () => {
+  fitTextTo90Percent(".text-container", ".fit-text");
+});
+
+const fruitSelect = document.getElementById('infopack');
+
+  fruitSelect.addEventListener('invalid', function () {
+    this.setCustomValidity('Applicants must read the Vendor Information Pack before applying');
+  });
+
+  fruitSelect.addEventListener('change', function () {
+    this.setCustomValidity('');
+  });
