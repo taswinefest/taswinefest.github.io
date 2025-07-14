@@ -1446,12 +1446,12 @@ background: linear-gradient(39deg, rgba(255,255,255,1) 12%, rgba(255, 222, 253,1
 
 
 a {
-  color: #000;
+  color: #333333;
   transition: 0.5s;
 }
 
 a:hover, a:active, a:focus {
-  color: #000;
+  color: #333333;
   outline: none;
   text-decoration: none;
 }
