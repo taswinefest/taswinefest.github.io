@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'wicon';
+  font-style: normal;
+  font-weight: 400;
+  src: url(wicon.woff) format('woff');
+}
+
+
+[class*='icon-']:before{
+	display: inline-block;
+   font-family: 'wicon';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+.icon-glassico:before{content:'\0043';}
