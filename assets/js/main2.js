@@ -126,56 +126,204 @@
     modal.find('#ticket-type').val(ticketType);
   });
 
-  // Init AOS
-  function aos_init() {
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  }
-  $(window).on('load', function() {
-    aos_init();
-  });
+
+ // $(window).on('load', function() {
+ //   aos_init();
+//  });
 
 })(jQuery);
 
-  // Homepage heading text auto-resizer
 
 
-function fitTextTo90Percent(containerSelector, textSelector, maxRem = 2, minRem = 0.5, step = 0.05) {
-  const container = document.querySelector(containerSelector);
-  const text = document.querySelector(textSelector);
 
-  if (!container || !text) return;
 
-  // Reset font size
-  let currentSize = maxRem;
-  text.style.fontSize = currentSize + "rem";
+//start Dynamic box randomiser
+document.addEventListener("DOMContentLoaded", function() {
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
 
-  // Measure target width
-  const maxAllowedWidth = container.clientWidth * 0.9;
+    function showRandomCards() {
+        const container = document.getElementById("vi_dynamic_cards");
+        if (!container) {
+            return;
+        }
 
-  // Shrink text until it fits 90% of container width or hits minRem
-  while (text.scrollWidth > maxAllowedWidth && currentSize > minRem) {
-    currentSize -= step;
-    text.style.fontSize = currentSize + "rem";
+        const cards = Array.from(document.querySelectorAll('[id^="vi_card_"]'));
+
+        if (cards.length === 0) {
+            return;
+        }
+
+        shuffle(cards);
+
+        cards.forEach(card => {
+            card.style.display = 'none';
+        });
+
+        for (let i = 0; i < 3; i++) {
+            if (cards[i]) {
+                cards[i].style.display = 'block';
+            }
+        }
+    }
+
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === "childList") {
+                showRandomCards();
+            }
+        });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    showRandomCards();
+});
+
+//end Dynamic box randomiser
+
+//start UTM auto-holder
+(function () {
+  function getUTMParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const utms = {};
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(param => {
+      utms[param] = urlParams.get(param);
+    });
+    return utms;
   }
-}
 
-window.addEventListener("load", () => {
-  fitTextTo90Percent(".text-container", ".fit-text");
-});
+  function inferSourceFromReferrer() {
+    const ref = document.referrer;
+    if (!ref) return 'Direct';
+    const lowerRef = ref.toLowerCase();
+    if (lowerRef.includes('google')) return 'Google';
+    if (lowerRef.includes('facebook')) return 'Facebook';
+    if (lowerRef.includes('instagram')) return 'Instagram';
+    if (lowerRef.includes('linkedin')) return 'LinkedIn';
+    if (lowerRef.includes('bing')) return 'Bing';
+    if (lowerRef.includes('yahoo')) return 'Yahoo';
+    return 'Referral';
+  }
 
-window.addEventListener("resize", () => {
-  fitTextTo90Percent(".text-container", ".fit-text");
-});
+  function storeUTMParams(utms) {
+    const hasAny = Object.values(utms).some(val => val !== null && val !== '');
+    const inferredSource = hasAny ? null : inferSourceFromReferrer();
+    const defaultVal = 'TWF_Website';
+    const finalUTMs = {
+      utm_source: utms.utm_source || inferredSource || defaultVal,
+      utm_medium: utms.utm_medium || (inferredSource ? 'referral' : defaultVal),
+      utm_campaign: utms.utm_campaign || defaultVal,
+      utm_term: utms.utm_term || '',
+      utm_content: utms.utm_content || ''
+    };
+    localStorage.setItem('utm_data', JSON.stringify(finalUTMs));
+  }
 
-const fruitSelect = document.getElementById('infopack');
+  function appendUTMToURL(url, utms) {
+    try {
+      const parsedUrl = new URL(url);
+      for (const key in utms) {
+        if (utms[key]) parsedUrl.searchParams.set(key, utms[key]);
+      }
+      return parsedUrl.toString();
+    } catch (e) {
+      return url;
+    }
+  }
 
-  fruitSelect.addEventListener('invalid', function () {
-    this.setCustomValidity('Applicants must read the Vendor Information Pack before applying');
+  const currentUTMs = getUTMParams();
+  const hasUTM = Object.values(currentUTMs).some(val => val !== null && val !== '');
+  if (hasUTM || !localStorage.getItem('utm_data')) {
+    storeUTMParams(currentUTMs);
+  }
+
+  const storedUTMs = JSON.parse(localStorage.getItem('utm_data') || '{}');
+  const currentDomain = window.location.hostname;
+
+  document.querySelectorAll('a[href^="http"]').forEach(link => {
+    try {
+      const linkURL = new URL(link.href);
+      if (linkURL.hostname !== currentDomain) {
+        link.href = appendUTMToURL(link.href, storedUTMs);
+      }
+    } catch (e) {}
   });
+})();
 
-  fruitSelect.addEventListener('change', function () {
-    this.setCustomValidity('');
-  });
+
+
+
+(function () {
+  const hero  = document.getElementById('hero');
+  if (!hero) return;
+
+  const video = hero.querySelector('video');
+  const img   = hero.querySelector('#hero-fallback');
+  if (!video || !img) return;
+
+  // Maximize autoplay chance on iOS
+  video.muted = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+  video.setAttribute('webkit-playsinline', '');
+
+  // Respect user power/data prefs: keep image if they prefer reductions
+  const prefersReducedData   = window.matchMedia?.('(prefers-reduced-data: reduce)').matches;
+  const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedData || prefersReducedMotion) return;
+
+  // Helper: confirm that playback is *really* happening
+  let started = false;
+  const confirmPlaying = () => {
+    // Some browsers fire 'playing' before frames render; also check time progress
+    if (!video.paused && video.readyState >= 2) {
+      started = true;
+      hero.classList.add('playing'); // hides the image via CSS
+      cleanup();
+    }
+  };
+
+  const onTimeUpdate = () => {
+    if (video.currentTime > 0.1) confirmPlaying();
+  };
+
+  const onPlaying = () => {
+    // Wait a tick to ensure currentTime > 0
+    setTimeout(confirmPlaying, 50);
+  };
+
+  const onCanPlay = () => {
+    // Try to play when data is ready
+    tryPlay();
+  };
+
+  function cleanup() {
+    video.removeEventListener('playing', onPlaying);
+    video.removeEventListener('timeupdate', onTimeUpdate);
+    video.removeEventListener('canplay', onCanPlay);
+  }
+
+  function tryPlay() {
+    const p = video.play?.();
+    if (p && typeof p.then === 'function') {
+      p.then(() => { /* 'playing' or timeupdate will confirm */ })
+       .catch(() => { /* leave image visible */ });
+    }
+  }
+
+  // Wire events
+  video.addEventListener('playing', onPlaying);
+  video.addEventListener('timeupdate', onTimeUpdate);
+  video.addEventListener('canplay', onCanPlay);
+
+  // Kick off an initial attempt
+  tryPlay();
+
+  // Safety: if it hasn't started after ~2 seconds, just keep the image
+  setTimeout(() => { if (!started) cleanup(); }, 2000);
+})();
