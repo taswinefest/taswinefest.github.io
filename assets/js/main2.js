@@ -1,5 +1,3 @@
-
-
 !(function($) {
   "use strict";
 
@@ -327,3 +325,76 @@ document.addEventListener("DOMContentLoaded", function() {
   // Safety: if it hasn't started after ~2 seconds, just keep the image
   setTimeout(() => { if (!started) cleanup(); }, 2000);
 })();
+  
+  // Mobile nav animation
+    // Mobile nav animation
+    // Mobile nav animation
+  
+document.addEventListener('DOMContentLoaded', function () {
+  const STAGGER = 0.2;     // seconds between each li
+  const LI_DURATION = 0.4; // seconds for fade/border
+
+  function applyVariables(ul) {
+    if (!ul) return;
+    const items = ul.querySelectorAll('li');
+
+    ul.style.setProperty('--stagger', STAGGER + 's');
+    ul.style.setProperty('--li-duration', LI_DURATION + 's');
+    ul.style.setProperty('--items', String(items.length));
+
+    items.forEach((li, idx) => {
+      li.style.setProperty('--i', String(idx + 1));
+    });
+  }
+
+  function setupForUl(ul) {
+    applyVariables(ul);
+    const listObserver = new MutationObserver(() => applyVariables(ul));
+    listObserver.observe(ul, { childList: true });
+  }
+
+  function findAndSetup() {
+    const ul = document.querySelector('#mobile-nav ul');
+    if (!ul) return false;
+    setupForUl(ul);
+    return true;
+  }
+
+  if (!findAndSetup()) {
+    const bodyObserver = new MutationObserver(() => {
+      if (findAndSetup()) bodyObserver.disconnect();
+    });
+    bodyObserver.observe(document.body, { childList: true, subtree: true });
+  }
+});
+
+    // end Mobile nav animation
+    // end Mobile nav animation
+    // end Mobile nav animation
+
+// start food animation helper 
+
+(function(){
+  function setHeadH(card){
+    var h = card.querySelector('.food26_heading');
+    var box = card.querySelector('.food26_text');
+    if(!h||!box) return;
+    box.style.setProperty('--food26-head-h', h.getBoundingClientRect().height + 'px');
+  }
+  function refresh(){ document.querySelectorAll('.food26_logo').forEach(setHeadH); }
+  document.addEventListener('DOMContentLoaded', refresh);
+  window.addEventListener('resize', refresh);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+})();
+
+//end food animation helper
+
+$(function () {
+  $('#faq-list').on('shown.bs.collapse', '.collapse', function () {
+    var $question = $(this).prev('a');
+    var headerOffset = 70;
+    $('html, body').stop().animate({
+      scrollTop: $question.offset().top - headerOffset
+    }, 250);
+  });
+});
