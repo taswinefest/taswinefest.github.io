@@ -379,12 +379,23 @@ document.addEventListener('DOMContentLoaded', function () {
     var h = card.querySelector('.food26_heading');
     var box = card.querySelector('.food26_text');
     if(!h||!box) return;
-    box.style.setProperty('--food26-head-h', h.getBoundingClientRect().height + 'px');
+    box.style.setProperty('--food26-head-h', h.offsetHeight + 'px');
   }
   function refresh(){ document.querySelectorAll('.food26_logo').forEach(setHeadH); }
+
+  // Run once DOM is ready
   document.addEventListener('DOMContentLoaded', refresh);
+
+  // Run again when window fully loaded (images, fonts, etc.)
+  window.addEventListener('load', refresh);
+
+  // Run again on resize
   window.addEventListener('resize', refresh);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+
+  // Run again when fonts finish loading
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(refresh);
+  }
 })();
 
 //end food animation helper
@@ -398,3 +409,4 @@ $(function () {
     }, 250);
   });
 });
+
