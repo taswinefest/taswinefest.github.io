@@ -207,7 +207,7 @@ font-size: clamp(66px, 6.8vw + 44px, 127px);
 
 .vi_img {
       width: 100vw;
-  height: 60vh;
+  height: 50vh;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -387,6 +387,7 @@ font-size: clamp(66px, 6.8vw + 44px, 127px);
                
                .vi_img {
                    border-bottom: 0px;
+                     height: 30vh;
                }
 }
 
@@ -2898,7 +2899,7 @@ color: var(--twf_white);
 
 .stickybtn {
     position: fixed;
-    bottom: 5%;
+    bottom: 0%;
     justify-content: center;
     align-items: center;
      left: 50%;
