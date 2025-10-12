@@ -2899,6 +2899,7 @@ color: var(--twf_white);
 
 .stickybtn {
     position: fixed;
+    display: none;
     bottom: 0%;
     justify-content: center;
     align-items: center;
@@ -3144,6 +3145,23 @@ color: var(--twf_white);
   transition: transform var(--li-duration) ease;
   transition-delay: calc(var(--i, 0) * var(--stagger) + var(--line-offset));
 }
+
+#mobile-nav ul li.mobilenav-inv {
+      background-color: var(--twf_secondary);
+}
+
+#mobile-nav ul li a.mobilenav-inv {
+      color: var(--twf_primary);
+}
+
+#mobile-nav ul li.mobilenav-inv:hover {
+      background-color: var(--twf_primary);
+}
+
+#mobile-nav ul li a.mobilenav-inv:hover {
+      color: var(--twf_secondary);
+}
+
 
 body.mobile-nav-active #mobile-nav ul li {
   animation: fadeIn var(--li-duration) ease forwards;
@@ -4527,6 +4545,13 @@ font-size: 1.3rem;
 @media (max-width: 460px) {
   #subscribe button {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 399.98px) {
+  .presale_countdown {
+    transform: scale(0.8)!important;
+    transform-origin: center;
   }
 }
 
