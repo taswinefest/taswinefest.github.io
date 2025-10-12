@@ -40,7 +40,7 @@
   .presale_value { font-size:2rem; font-weight:bold; }
   .presale_label { font-size:.8rem; color:#333333; text-transform:uppercase; }
   .presale_endmsg { display:none; margin-top:1rem; color: red; }
-        .notpresale, .livepresale { display: none; } .footer-notice {display: none!important;}
+         .footer-notice {display: none!important;}
 </style>
    
     
@@ -162,31 +162,9 @@ SeekaInstall({"extraParams":"&vo=latest","hosts":[],"instances":[{"org":"8262f61
                  <div style="padding-bottom: 30px;"></div>
               
               </div>
-              <!-- Countdown -->
-
-
               
               
-              
-               <div style="line-height: 1;" class="notpresale col-12"> <div class="presale_countdown">
-    <h3><span style="font-weight: 400;">Pre&nbsp;Sale&nbsp;access&nbsp;opens</span> Mon 13 Oct 9.00am AEDT</h3>
-    <div class="presale_values">
-      <div class="presale_unit"><div class="presale_value" id="presale_days">00</div><div class="presale_label">Days</div></div>
-      <div class="presale_unit"><div class="presale_value" id="presale_hours">00</div><div class="presale_label">Hours</div></div>
-      <div class="presale_unit"><div class="presale_value" id="presale_minutes">00</div><div class="presale_label">Minutes</div></div>
-      <div class="presale_unit"><div class="presale_value" id="presale_seconds">00</div><div class="presale_label">Seconds</div></div>
-    </div>
-    <p class="presale_endmsg" id="presale_endmsg">Reload your page</p>
-  </div>
-                                 <div style="padding-bottom: 30px;"></div>
-                   
-                   
-                   </div>
-                            <div class="col-12 d-flex justify-content-center align-items-center"><img alt="Ticket Information" class="notpresale img-nosave" style="padding-top: 50px;width: 100%;" src="assets/img/presaleinfo.jpg"></div>
-
-              
-              
-               <div style="line-height: 1;" class="livepresale col-12"> <div class="presale_countdown">
+               <div style="line-height: 1;" class="col-12"> <div class="presale_countdown">
     <h3><span style="font-weight: 400;">Pre&nbsp;Sale access&nbsp;is </span>Open Now</h3>
                    <h4 style="font-size: 1.3rem; font-weight: 200;">Choose your session to access tickets</h4>
     
@@ -202,7 +180,7 @@ SeekaInstall({"extraParams":"&vo=latest","hosts":[],"instances":[{"org":"8262f61
               
               
                       </div></div>
-        <div class="livepresale container">
+        <div class="container">
               <div class="row d-flex justify-content-center align-items-center" style="padding-left: 20px; padding-right: 20px;">
               <div class="col-6 col-sm-4" style="padding-bottom: 20px; padding-left: 0; padding-right: 0;">
                   <a href="https://oztixspecialoffers2.oztix.com.au/outlet/event/3bd95425-2112-4f38-8f76-4f52c7c1ee6d?accessCode=twf2026"><img alt="Saturday Afternoon Tickets" src="assets/img/oztix/satarvo.jpg" style="width: 100%;"></a>
@@ -221,102 +199,6 @@ SeekaInstall({"extraParams":"&vo=latest","hosts":[],"instances":[{"org":"8262f61
 
 
     </section>
-     
-      
-<!-- Countdown script -->
-<script>
-(() => {
-  const end = new Date("2025-10-13T09:00:00+11:00");
-  const daysEl = document.getElementById('presale_days');
-  const hoursEl = document.getElementById('presale_hours');
-  const minutesEl = document.getElementById('presale_minutes');
-  const secondsEl = document.getElementById('presale_seconds');
-  const endmsg = document.getElementById('presale_endmsg');
-
-  let timer;
-
-  function pad(n){ return n.toString().padStart(2,'0'); }
-
-  function tick() {
-    const now = new Date();
-    const diff = end.getTime() - now.getTime();
-
-    if (diff <= 0) {
-      daysEl.textContent = hoursEl.textContent = minutesEl.textContent = secondsEl.textContent = "00";
-      endmsg.style.display = "block";
-      if (timer) clearInterval(timer);  // only clear if it exists
-      return false; // signal expired
-    }
-
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const m = Math.floor((diff % (1000*60*60)) / (1000*60));
-    const s = Math.floor((diff % (1000*60)) / 1000);
-
-    daysEl.textContent = pad(d);
-    hoursEl.textContent = pad(h);
-    minutesEl.textContent = pad(m);
-    secondsEl.textContent = pad(s);
-
-    return true; // still running
-  }
-
-  if (tick()) { // only start interval if event not ended
-    timer = setInterval(tick, 1000);
-  }
-})();
-</script>
-
-<!-- END Countdown script -->
-      
-      
-      
-      
-     <!-- change countdown to tix window --> 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var targetDate = new Date("2025-10-13T09:00:00+11:00");
-
-  var notEls  = document.querySelectorAll(".notpresale");
-  var liveEls = document.querySelectorAll(".livepresale");
-
-  function cache(nl){ nl.forEach(function(el){
-    if(!el.dataset.origDisplay){
-      var d = getComputedStyle(el).display;
-      el.dataset.origDisplay = d === "none" ? "block" : d;
-    }
-  });}
-  function hide(nl){ nl.forEach(function(el){
-    el.style.setProperty("display","none","important");
-    el.setAttribute("aria-hidden","true");
-    el.hidden = true;
-  });}
-  function show(nl){ nl.forEach(function(el){
-    var d = el.dataset.origDisplay || "block";
-    el.hidden = false;
-    el.removeAttribute("aria-hidden");
-    el.style.setProperty("display", d, "important");
-  });}
-
-  cache(notEls); cache(liveEls);
-
-  function apply(){
-    if (Date.now() < targetDate.getTime()){ show(notEls); hide(liveEls); }
-    else { hide(notEls); show(liveEls); }
-  }
-
-  apply();
-
-  var msUntil = targetDate.getTime() - Date.now();
-  if (msUntil > 0) setTimeout(apply, msUntil);
-
-  document.addEventListener("visibilitychange", function(){
-    if (!document.hidden) apply();
-  });
-});
-</script>
-
-     <!-- end change countdown to tix window --> 
 
 
 
