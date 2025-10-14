@@ -2899,7 +2899,6 @@ color: var(--twf_white);
 
 .stickybtn {
     position: fixed;
-    display: none;
     bottom: 0%;
     justify-content: center;
     align-items: center;
