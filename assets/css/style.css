@@ -2,9 +2,9 @@
 
 Warning: This stylesheet is more cascading chaos than style.
 
-Curated carefully and with little regard for best practice, by Luke Schlenner
+Thanks for peeking. It's a mess but it mostly works - just like me
 
-lukeschlenner (the at symbol) gmail (a full stop) com 
+Luke Schlenner - lukeschlenner (the at symbol) gmail (a full stop) com 
 
 ----------- */
 
@@ -2899,6 +2899,7 @@ color: var(--twf_white);
 
 .stickybtn {
     position: fixed;
+    display: none!important;
     bottom: 0%;
     justify-content: center;
     align-items: center;
