@@ -20,11 +20,6 @@ Luke Schlenner - lukeschlenner (the at symbol) gmail (a full stop) com
   color: var(--twf_secondary);         
 }
 
-#nav-menu-xmas .nav-menu > li {
-margin-top: 12px!important;
-    float: right;
-} 
-
 input:focus {
   outline: none; 
   border: 2px solid var(--twf_primary); 
@@ -2233,7 +2228,7 @@ background: var(--twf_primary);
 
 @media (max-width: 400px) {
     #header #logo img {
-  max-height: 50px !important;
+  max-height: 35px !important;
 }
 }
 
@@ -2960,7 +2955,6 @@ color: var(--twf_white);
 
 .nav-menu > li {
   float: left;
-    margin-top: 12px;
 }
 
 .nav-menu li:hover > ul,
