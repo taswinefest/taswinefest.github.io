@@ -1,7 +1,5 @@
 /* ---------
 
-Warning: This stylesheet is more cascading chaos than style.
-
 Thanks for peeking. It's a mess but it mostly works - just like me
 
 Luke Schlenner - lukeschlenner (the at symbol) gmail (a full stop) com 
@@ -55,6 +53,16 @@ button:focus {
 
 .twf_underliner {
         font-weight: 700;
+}
+
+/* To enable the festival guide, remove the display tag completely, and change opposite to display:none*/
+
+.festguide {
+    display: none!important; 
+}
+
+.festguide_opposite {
+   display: flex!important; 
 }
 
 .wineicon {
@@ -2995,14 +3003,14 @@ color: var(--twf_white);
   margin: 0;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1080px) {
   #nav-menu-container {
     display: none;
   }
     
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1070px) {
   .mobilenav_socials {
     display: none !important;
   }
@@ -3223,7 +3231,7 @@ body.mobile-nav-active .mobilenav_socials {
     opacity: 100%;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1080px) {
   #mobile-nav-toggle {
     display: inline;
   }
@@ -5364,5 +5372,3 @@ padding-top: 20px;
 /*--------------------------------------------------------------
 # END content notice
 --------------------------------------------------------------*/
-
-
