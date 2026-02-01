@@ -58,11 +58,10 @@ button:focus {
 /* To enable the festival guide, remove the display tag completely, and change opposite to display:none*/
 
 .festguide {
-    display: none!important; 
 }
 
 .festguide_opposite {
-   display: flex!important; 
+    display: none!important; 
 }
 
 .wineicon {
